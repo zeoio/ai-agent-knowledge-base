@@ -2,5 +2,80 @@
   "registry_version": "1.0",
   "item_type": "skill",
   "description": "Agent skills, reusable prompt workflows, capability packs, and installable AI assistant extensions.",
-  "items": []
+  "items": [
+    {
+      "id": "op7418-guizang-ppt-skill",
+      "name": "Guizang PPT Skill",
+      "status": "watching",
+      "trust_level": "medium",
+      "summary": "A Claude Code / Codex compatible agent skill for generating single-file HTML presentation decks, PPT visuals, and social cover images in editorial magazine or Swiss design styles.",
+      "use_cases": [
+        "Generate horizontal swipe HTML slide decks from articles, Markdown, outlines, or product analysis notes.",
+        "Create presentation visuals, screenshots, and social cover images with consistent visual systems.",
+        "Use stricter Swiss-style layout validation for data, product, method, and technical presentations."
+      ],
+      "tags": [
+        "agent",
+        "skill",
+        "presentation",
+        "ppt",
+        "html-deck",
+        "codex",
+        "claude-code",
+        "image-generation",
+        "swiss-design",
+        "web-ppt"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/op7418/guizang-ppt-skill",
+          "note": "Canonical public repository."
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/op7418/guizang-ppt-skill/blob/main/README.md",
+          "note": "Usage, installation, supported platforms, and examples."
+        },
+        {
+          "type": "skill",
+          "url": "https://github.com/op7418/guizang-ppt-skill/blob/main/SKILL.md",
+          "note": "Main skill workflow and operating instructions."
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/op7418/guizang-ppt-skill/blob/main/LICENSE",
+          "note": "Repository reports AGPL-3.0 license."
+        }
+      ],
+      "install": {
+        "installed": false,
+        "review_status": "source-read-not-installed",
+        "recommended_command": "npx skills add https://github.com/op7418/guizang-ppt-skill --skill guizang-ppt-skill",
+        "manual_clone_command": "git clone https://github.com/op7418/guizang-ppt-skill.git ~/.claude/skills/guizang-ppt-skill",
+        "update_command": "cd ~/.claude/skills/guizang-ppt-skill && git pull"
+      },
+      "risk_notes": [
+        "Not installed or executed locally as of 2026-06-14.",
+        "Repository license is AGPL-3.0; review implications before adapting or redistributing generated/templates code.",
+        "Installation requires running npx or cloning a third-party repository into an agent skills directory.",
+        "The workflow expects an agent with local filesystem and shell access, so review source before granting broad permissions.",
+        "Generated HTML decks may use browser runtime features, local assets, WebGL/canvas, and possible CDN fallbacks; inspect output before sharing externally.",
+        "Presentation source materials, screenshots, and generated images may contain sensitive business or personal information."
+      ],
+      "source_review": {
+        "checked_at": "2026-06-14",
+        "checked_commit": "82fe5ae129e8c2a12e1155fcabed6703342749d6",
+        "default_branch": "main",
+        "github_description": "AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.",
+        "primary_language": "HTML",
+        "license": "AGPL-3.0",
+        "repo_created_at": "2026-04-23",
+        "repo_pushed_at": "2026-06-02"
+      },
+      "detail_path": "skills/op7418-guizang-ppt-skill.md",
+      "created_at": "2026-06-14",
+      "updated_at": "2026-06-14"
+    }
+  ]
 }
