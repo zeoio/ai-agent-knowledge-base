@@ -1,0 +1,51 @@
+name: New AI item
+description: Track a new AI project, skill, tool, or document.
+title: "[Intake] "
+labels:
+  - intake
+body:
+  - type: dropdown
+    id: item_type
+    attributes:
+      label: Item type
+      options:
+        - project
+        - skill
+        - tool
+        - document
+        - research_note
+        - decision
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source link
+      placeholder: https://...
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: Describe the workflow, question, or decision this may affect.
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Initial status
+      options:
+        - watching
+        - evaluating
+        - active
+        - paused
+        - rejected
+        - archived
+    validations:
+      required: true
+  - type: textarea
+    id: risk
+    attributes:
+      label: Initial risk notes
+      description: Permissions, credential access, private data access, cost, or maintenance concerns.

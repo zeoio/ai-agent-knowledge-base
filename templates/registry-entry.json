@@ -1,0 +1,31 @@
+{
+  "id": "example-item",
+  "name": "Example Item",
+  "status": "watching",
+  "trust_level": "unknown",
+  "summary": "One sentence explaining what this is and why it matters.",
+  "use_cases": [
+    "Describe a concrete workflow this supports."
+  ],
+  "tags": [
+    "agent",
+    "docs"
+  ],
+  "links": [
+    {
+      "type": "official",
+      "url": "https://example.com",
+      "note": "Primary source."
+    }
+  ],
+  "install": {
+    "method": "not-reviewed",
+    "notes": "Do not run installation commands before source review."
+  },
+  "risk_notes": [
+    "Unknown permissions until reviewed."
+  ],
+  "detail_path": "projects/example-item.md",
+  "created_at": "2026-06-14",
+  "updated_at": "2026-06-14"
+}
