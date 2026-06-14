@@ -76,6 +76,90 @@
       "detail_path": "skills/op7418-guizang-ppt-skill.md",
       "created_at": "2026-06-14",
       "updated_at": "2026-06-14"
+    },
+    {
+      "id": "alchaincyf-huashu-design",
+      "name": "Huashu Design",
+      "status": "watching",
+      "trust_level": "medium",
+      "summary": "An agent-agnostic HTML-native design skill for producing high-fidelity prototypes, HTML slide decks, motion demos, infographics, design variations, expert reviews, and exportable MP4/GIF/PPTX/PDF artifacts.",
+      "use_cases": [
+        "Create high-fidelity HTML app or web prototypes with clickable flows and browser verification.",
+        "Generate HTML-native presentation decks and optionally export them to editable PPTX or PDF.",
+        "Produce timeline-driven motion design demos and export MP4/GIF outputs with optional audio.",
+        "Explore multiple visual directions, apply brand asset protocols, and run structured design reviews."
+      ],
+      "tags": [
+        "agent",
+        "skill",
+        "design",
+        "prototype",
+        "html",
+        "presentation",
+        "pptx",
+        "animation",
+        "video-export",
+        "infographic",
+        "codex",
+        "claude-code",
+        "ui-ux"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/alchaincyf/huashu-design",
+          "note": "Canonical public repository."
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/alchaincyf/huashu-design/blob/master/README.md",
+          "note": "Chinese README with positioning, installation, demos, and license notes."
+        },
+        {
+          "type": "skill",
+          "url": "https://github.com/alchaincyf/huashu-design/blob/master/SKILL.md",
+          "note": "Main agent workflow and operating instructions."
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/alchaincyf/huashu-design/blob/master/LICENSE",
+          "note": "MIT license."
+        }
+      ],
+      "install": {
+        "installed": false,
+        "review_status": "source-read-not-installed",
+        "recommended_command": "npx skills add alchaincyf/huashu-design",
+        "clone_command": "git clone https://github.com/alchaincyf/huashu-design.git",
+        "dependencies_observed": [
+          "pdf-lib",
+          "playwright",
+          "pptxgenjs",
+          "sharp"
+        ]
+      },
+      "risk_notes": [
+        "Not installed or executed locally as of 2026-06-14.",
+        "Installation requires running npx or cloning a third-party repository into an agent skills environment.",
+        "The skill expects local filesystem, shell, browser, Playwright, export scripts, and optional media-processing workflows.",
+        "Generated prototypes, decks, videos, and screenshots may embed private brand assets, product screenshots, customer data, or local file paths.",
+        "Some workflows involve downloading brand assets, public images, audio, or external references; source and licensing should be checked per project.",
+        "Optional voiceover or API-driven workflows may require secrets in environment variables; never commit generated .env files.",
+        "Repository is large and asset-heavy; evaluate install size and dependency surface before making it active."
+      ],
+      "source_review": {
+        "checked_at": "2026-06-14",
+        "checked_commit": "55ff7cc03e0817a39a7987a6331b7eef17faf40c",
+        "default_branch": "master",
+        "github_description": "Huashu Design · HTML-native design skill for Claude Code · Claude Code 里 HTML 原生的设计 skill · 高保真原型 / 幻灯片 / 动画 + 20 设计哲学 + 5 维评审 + MP4 导出 · Agent-agnostic",
+        "primary_language": "HTML",
+        "license": "MIT",
+        "repo_created_at": "2026-04-19",
+        "repo_pushed_at": "2026-06-06"
+      },
+      "detail_path": "skills/alchaincyf-huashu-design.md",
+      "created_at": "2026-06-14",
+      "updated_at": "2026-06-14"
     }
   ]
 }
