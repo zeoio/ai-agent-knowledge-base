@@ -2,5 +2,98 @@
   "registry_version": "1.0",
   "item_type": "tool",
   "description": "MCP servers, CLIs, SDKs, IDE plugins, browser extensions, local services, and hosted workflow tools.",
-  "items": []
+  "items": [
+    {
+      "id": "futantan-agent-skills-md",
+      "name": "Agent-Skills.md",
+      "status": "watching",
+      "trust_level": "medium",
+      "summary": "A hosted directory and explorer for AI agent skills that indexes skill repositories, previews SKILL.md instructions, and supports downloading complete skill folders for local use.",
+      "use_cases": [
+        "Discover agent skills by keyword, author, tag, or category before deciding whether to install them.",
+        "Preview SKILL.md metadata and instructions from indexed repositories.",
+        "Download complete skill folders for local evaluation.",
+        "Submit GitHub skill repositories or specific skills folders to be indexed."
+      ],
+      "tags": [
+        "agent",
+        "skills",
+        "directory",
+        "marketplace",
+        "discovery",
+        "github",
+        "hosted-service",
+        "nextjs",
+        "open-source"
+      ],
+      "links": [
+        {
+          "type": "website",
+          "url": "https://agent-skills.md/",
+          "note": "Hosted skill marketplace and directory."
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/futantan/agent-skills.md",
+          "note": "Open source repository."
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/futantan/agent-skills.md/blob/main/README.md",
+          "note": "Repository README with purpose, tech stack, and local development commands."
+        },
+        {
+          "type": "submit",
+          "url": "https://agent-skills.md/submit",
+          "note": "Submit a GitHub URL that points to a repo or skills folder."
+        }
+      ],
+      "install": {
+        "installed": false,
+        "access": "hosted",
+        "hosted_url": "https://agent-skills.md/",
+        "local_development": {
+          "clone_command": "git clone https://github.com/futantan/agent-skills.md.git",
+          "install_command": "pnpm install",
+          "dev_command": "pnpm dev",
+          "requires": [
+            "Node.js >=20.9.0",
+            "pnpm",
+            "PostgreSQL"
+          ]
+        },
+        "dependencies_observed": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Drizzle ORM",
+          "PostgreSQL",
+          "oRPC",
+          "AI SDK"
+        ]
+      },
+      "risk_notes": [
+        "Not self-hosted or installed locally as of 2026-06-15.",
+        "The directory indexes third-party skills; each discovered skill still needs separate source, permission, and license review before installation.",
+        "Downloading a complete skill folder may introduce instructions, scripts, assets, or tooling that can affect future agent behavior.",
+        "Search results and popularity metrics are dynamic; verify current repository source before using a skill.",
+        "Self-hosting requires Node, pnpm, PostgreSQL, and environment configuration; do not commit secrets from local setup.",
+        "No root LICENSE file was found via raw GitHub URL during this review; confirm licensing before modifying or redistributing the site code."
+      ],
+      "source_review": {
+        "checked_at": "2026-06-15",
+        "checked_commit": "98cd624fb1542ad7880e1112576061bb2874de8e",
+        "default_branch": "main",
+        "website_claimed_skill_count": 74293,
+        "github_description": "Find awesome Agent Skills",
+        "primary_language": "TypeScript",
+        "license": "unknown",
+        "github_api_status": "Unauthenticated API was rate-limited during review; repository page, raw README, raw package.json, and git ls-remote were used."
+      },
+      "detail_path": "tools/futantan-agent-skills-md.md",
+      "created_at": "2026-06-15",
+      "updated_at": "2026-06-15"
+    }
+  ]
 }
