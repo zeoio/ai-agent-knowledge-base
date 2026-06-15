@@ -94,6 +94,137 @@
       "detail_path": "tools/futantan-agent-skills-md.md",
       "created_at": "2026-06-15",
       "updated_at": "2026-06-15"
+    },
+    {
+      "id": "skillsmp-com",
+      "name": "SkillsMP",
+      "status": "watching",
+      "trust_level": "medium",
+      "summary": "A hosted community marketplace and discovery platform for SKILL.md-based agent skills, with keyword search, categories, occupation filters, REST API access, and a streamable HTTP MCP endpoint.",
+      "use_cases": [
+        "Search for candidate agent skills by keyword, category, creator, repository, or SOC occupation.",
+        "Use the REST API or MCP endpoint to let agents discover skills programmatically.",
+        "Inspect skill detail pages and source GitHub links before deciding whether to track or install a skill.",
+        "Browse ecosystem trends, creators, repositories, and occupation-based skill clusters."
+      ],
+      "tags": [
+        "agent",
+        "skills",
+        "directory",
+        "marketplace",
+        "discovery",
+        "rest-api",
+        "mcp",
+        "github",
+        "hosted-service",
+        "multi-language",
+        "occupations"
+      ],
+      "links": [
+        {
+          "type": "website",
+          "url": "https://skillsmp.com/",
+          "note": "Hosted Agent Skills marketplace."
+        },
+        {
+          "type": "ai-index",
+          "url": "https://skillsmp.com/index.md",
+          "note": "Machine-readable overview for AI agents."
+        },
+        {
+          "type": "llms",
+          "url": "https://skillsmp.com/llms.txt",
+          "note": "LLM-oriented documentation and API summary."
+        },
+        {
+          "type": "api-docs",
+          "url": "https://skillsmp.com/docs/api",
+          "note": "REST API documentation."
+        },
+        {
+          "type": "openapi",
+          "url": "https://skillsmp.com/openapi.json",
+          "note": "OpenAPI specification."
+        },
+        {
+          "type": "mcp",
+          "url": "https://skillsmp.com/mcp",
+          "note": "Streamable HTTP MCP endpoint."
+        },
+        {
+          "type": "mcp-manifest",
+          "url": "https://skillsmp.com/.well-known/mcp",
+          "note": "MCP discovery manifest."
+        },
+        {
+          "type": "about",
+          "url": "https://skillsmp.com/about",
+          "note": "Mission, independence disclaimer, and ecosystem map explanation."
+        },
+        {
+          "type": "terms",
+          "url": "https://skillsmp.com/terms",
+          "note": "Terms of service."
+        },
+        {
+          "type": "privacy",
+          "url": "https://skillsmp.com/privacy",
+          "note": "Privacy policy."
+        }
+      ],
+      "install": {
+        "installed": false,
+        "access": "hosted",
+        "hosted_url": "https://skillsmp.com/",
+        "rest_api": {
+          "base_url": "https://skillsmp.com",
+          "search_endpoint": "GET /api/v1/skills/search",
+          "anonymous_limits": "50 requests/day and 10 requests/minute for keyword search",
+          "authenticated_limits": "500 requests/day and 30 requests/minute with free API key"
+        },
+        "mcp": {
+          "endpoint": "https://skillsmp.com/mcp",
+          "transport": "streamable-http",
+          "tools_observed": [
+            "search_skills",
+            "get_skill",
+            "list_categories"
+          ]
+        }
+      },
+      "risk_notes": [
+        "Not self-hosted or installed locally as of 2026-06-15.",
+        "The service is an independent community project and states that it is not affiliated with Anthropic or OpenAI.",
+        "The marketplace does not guarantee the accuracy, reliability, safety, quality, or functionality of indexed skills; each skill needs separate review before installation.",
+        "Indexed skills are sourced from public GitHub repositories and remain subject to their own repository licenses.",
+        "Terms prohibit scraping or systematically downloading large portions of the site; use documented API and rate limits instead.",
+        "Privacy policy lists usage analytics, device information, cookies, Google Analytics, Microsoft Clarity, and Ahrefs Analytics.",
+        "API keys must be stored in a secret manager or environment variable and never committed.",
+        "Public pages claim 1.7M+ skills while the MCP manifest mentions 900K+ Claude Code skills; treat counts as dynamic discovery signals, not audited inventory."
+      ],
+      "source_review": {
+        "checked_at": "2026-06-15",
+        "website_claimed_skill_count": "1.7M+",
+        "claimed_categories": "12 domains and 50+ categories",
+        "claimed_languages": [
+          "English",
+          "Chinese",
+          "Japanese",
+          "Korean",
+          "Spanish",
+          "French",
+          "German",
+          "Portuguese",
+          "Arabic"
+        ],
+        "api_license": "OpenAPI info reports MIT",
+        "site_source_repository": "not confirmed",
+        "terms_last_updated": "November 2025",
+        "privacy_last_updated": "November 2025"
+      },
+      "detail_path": "tools/skillsmp-com.md",
+      "created_at": "2026-06-15",
+      "updated_at": "2026-06-15"
     }
   ]
 }
