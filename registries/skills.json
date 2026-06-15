@@ -446,6 +446,157 @@
       "detail_path": "skills/egonex-ai-understand-anything.md",
       "created_at": "2026-06-15",
       "updated_at": "2026-06-15"
+    },
+    {
+      "id": "joeseesun-qiaomu-anything-to-notebooklm",
+      "name": "Qiaomu Anything to NotebookLM",
+      "status": "watching",
+      "trust_level": "low",
+      "summary": "A Claude Code Skill for collecting multi-source content, uploading it to Google NotebookLM, and generating podcasts, slide decks, mind maps, quizzes, reports, Feishu documents, and other NotebookLM outputs.",
+      "use_cases": [
+        "Convert WeChat articles, web pages, PDFs, EPUBs, Markdown, Office files, images, audio, ZIP files, and search results into NotebookLM sources.",
+        "Use NotebookLM to generate podcasts, PPT-style slide decks, mind maps, quizzes, reports, infographics, data tables, and flashcards.",
+        "Run deeper recursive-question analysis over long documents or media transcripts.",
+        "Create Feishu documents from NotebookLM analysis output when the Feishu integration is configured."
+      ],
+      "tags": [
+        "agent",
+        "skill",
+        "claude-code",
+        "notebooklm",
+        "content-ingestion",
+        "document-processing",
+        "web-scraping",
+        "browser-automation",
+        "mcp",
+        "paywall-bypass",
+        "weixin",
+        "podcast",
+        "youtube",
+        "pdf",
+        "epub",
+        "feishu"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/joeseesun/qiaomu-anything-to-notebooklm",
+          "note": "Canonical public repository."
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/joeseesun/qiaomu-anything-to-notebooklm/blob/main/README.md",
+          "note": "Overview, supported sources, install flow, examples, and paywall-bypass description."
+        },
+        {
+          "type": "skill",
+          "url": "https://github.com/joeseesun/qiaomu-anything-to-notebooklm/blob/main/SKILL.md",
+          "note": "Main Claude Skill instructions and source-handling workflow."
+        },
+        {
+          "type": "installer",
+          "url": "https://github.com/joeseesun/qiaomu-anything-to-notebooklm/blob/main/install.sh",
+          "note": "Shell installer that installs Python dependencies, Playwright Chromium, notebooklm-py, and a WeChat MCP server."
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/joeseesun/qiaomu-anything-to-notebooklm/blob/main/LICENSE",
+          "note": "MIT license."
+        }
+      ],
+      "install": {
+        "installed": false,
+        "review_status": "source-read-not-installed",
+        "clone_command": "git clone https://github.com/joeseesun/qiaomu-anything-to-notebooklm.git ~/.claude/skills/qiaomu-anything-to-notebooklm",
+        "upstream_installer_command": "cd ~/.claude/skills/qiaomu-anything-to-notebooklm && ./install.sh",
+        "authentication_required": [
+          "notebooklm login",
+          "notebooklm list"
+        ],
+        "optional_environment_variables": [
+          "GETNOTE_API_KEY",
+          "GETNOTE_CLIENT_ID"
+        ],
+        "installer_behavior_observed": [
+          "Checks for Python 3.9 or newer.",
+          "Clones Bwkyd/wexin-read-mcp into the skill directory when missing.",
+          "Installs Python dependencies from both the MCP server and skill requirements files.",
+          "Installs Playwright Chromium.",
+          "Installs notebooklm-py from https://github.com/teng-lin/notebooklm-py.git when notebooklm is missing.",
+          "Prints a Claude MCP config snippet for the weixin-reader server.",
+          "Requires a separate NotebookLM browser/account login."
+        ],
+        "dependencies_observed": [
+          "fastmcp",
+          "playwright",
+          "beautifulsoup4",
+          "lxml",
+          "markitdown[all]",
+          "notebooklm-py",
+          "wexin-read-mcp"
+        ]
+      },
+      "risk_notes": [
+        "Not installed or executed locally as of 2026-06-15.",
+        "The repository explicitly implements paywall-bypass behavior for many news and media sites; this may violate site terms, copyright, subscription agreements, or local law.",
+        "The skill can collect, transform, and upload third-party content to NotebookLM/Google services; review copyright, privacy, and data-handling constraints before use.",
+        "The install script runs pip installs, installs Playwright Chromium, clones an MCP server, and installs notebooklm-py from GitHub; review the source and use a disposable environment before running it.",
+        "WeChat article access uses an MCP/browser-simulation workflow and should be reviewed before granting local browser, account, or filesystem access.",
+        "Optional Get笔记 API integration uses GETNOTE_API_KEY and GETNOTE_CLIENT_ID; keep these secrets out of the repository and shell history where possible.",
+        "The workflow may write outputs to /tmp, Feishu documents, and NotebookLM notebooks, which can expose sensitive source material or generated summaries.",
+        "The SKILL instructions say YouTube URLs should be passed directly to NotebookLM and not downloaded with yt-dlp, Whisper, or browser subtitle extraction.",
+        "Proxy services such as r.jina.ai, defuddle.md, archive.today, and other fetch methods may send requested URLs or content through third-party infrastructure."
+      ],
+      "source_review": {
+        "checked_at": "2026-06-15",
+        "checked_commit": "cea6ceee8cdcd01a573af5ae75c2d3cffc20650b",
+        "default_branch": "main",
+        "github_description": "Claude Skill: Multi-source content processor for NotebookLM. Supports WeChat articles, web pages, YouTube, PDF, Markdown, search queries → Podcast/PPT/MindMap/Quiz etc.",
+        "primary_language": "Python",
+        "license": "MIT",
+        "repo_created_at": "2026-01-25",
+        "repo_pushed_at": "2026-04-28",
+        "stars_observed": 5196,
+        "topics_observed": [
+          "automation",
+          "claude",
+          "mcp",
+          "notebooklm",
+          "skill"
+        ],
+        "files_observed": [
+          "SKILL.md",
+          "README.md",
+          "install.sh",
+          "requirements.txt",
+          "check_env.py",
+          "main.py",
+          "scripts/fetch_url.sh",
+          "scripts/get_podcast_transcript.py",
+          "feishu-read-mcp/",
+          "LICENSE"
+        ],
+        "supported_sources_observed": [
+          "WeChat articles",
+          "web pages",
+          "paywalled articles",
+          "YouTube URLs",
+          "podcasts",
+          "Bilibili videos",
+          "X/Twitter posts",
+          "PDF",
+          "EPUB",
+          "Markdown",
+          "Office documents",
+          "images/OCR",
+          "audio/transcription",
+          "ZIP archives",
+          "search queries"
+        ]
+      },
+      "detail_path": "skills/joeseesun-qiaomu-anything-to-notebooklm.md",
+      "created_at": "2026-06-15",
+      "updated_at": "2026-06-15"
     }
   ]
 }
