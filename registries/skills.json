@@ -297,6 +297,155 @@
       "detail_path": "skills/obra-superpowers.md",
       "created_at": "2026-06-15",
       "updated_at": "2026-06-15"
+    },
+    {
+      "id": "egonex-ai-understand-anything",
+      "name": "Understand Anything",
+      "status": "watching",
+      "trust_level": "medium",
+      "summary": "A cross-platform agent plugin and skill suite that analyzes codebases, documentation, or knowledge bases into interactive knowledge graphs with dashboard exploration, chat, diffs, explanations, onboarding guides, and domain views.",
+      "use_cases": [
+        "Analyze a large codebase into a searchable interactive knowledge graph for onboarding and architecture exploration.",
+        "Ask questions about codebase structure, flows, files, functions, classes, and dependencies after graph generation.",
+        "Generate dashboard views, guided tours, onboarding guides, diff impact analysis, and file/function explanations.",
+        "Analyze Karpathy-pattern LLM wiki knowledge bases into navigable knowledge graphs.",
+        "Use localized graph and dashboard content for Chinese, Japanese, Korean, Russian, and English workflows."
+      ],
+      "tags": [
+        "agent",
+        "skill",
+        "plugin",
+        "codex",
+        "claude-code",
+        "cursor",
+        "copilot",
+        "gemini-cli",
+        "codebase-analysis",
+        "knowledge-graph",
+        "dashboard",
+        "onboarding",
+        "static-analysis",
+        "tree-sitter",
+        "local-first"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/Egonex-AI/Understand-Anything",
+          "note": "Canonical public repository."
+        },
+        {
+          "type": "homepage",
+          "url": "https://understand-anything.com",
+          "note": "Project homepage."
+        },
+        {
+          "type": "demo",
+          "url": "https://understand-anything.com/demo/",
+          "note": "Interactive live demo."
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/Egonex-AI/Understand-Anything/blob/main/README.md",
+          "note": "Overview, features, commands, and install instructions."
+        },
+        {
+          "type": "claude-plugin",
+          "url": "https://github.com/Egonex-AI/Understand-Anything/blob/main/.claude-plugin/plugin.json",
+          "note": "Claude plugin manifest."
+        },
+        {
+          "type": "security",
+          "url": "https://github.com/Egonex-AI/Understand-Anything/blob/main/SECURITY.md",
+          "note": "Security reporting and local-only scope statement."
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/Egonex-AI/Understand-Anything/blob/main/LICENSE",
+          "note": "MIT license."
+        }
+      ],
+      "install": {
+        "installed": false,
+        "review_status": "source-read-not-installed",
+        "version_observed": "2.7.7",
+        "claude_code": [
+          "/plugin marketplace add Egonex-AI/Understand-Anything",
+          "/plugin install understand-anything"
+        ],
+        "codex": "curl -fsSL https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/install.sh | bash -s codex",
+        "macos_linux_installer": "curl -fsSL https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/install.sh | bash",
+        "windows_installer": "iwr -useb https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/install.ps1 | iex",
+        "installer_behavior_observed": [
+          "Clones the repository to ~/.understand-anything/repo by default.",
+          "Links plugin root to ~/.understand-anything-plugin.",
+          "For Codex, links per-skill folders into ~/.agents/skills.",
+          "Generated project analysis is written under .understand-anything/."
+        ],
+        "commands_observed": [
+          "/understand",
+          "/understand-dashboard",
+          "/understand-chat",
+          "/understand-diff",
+          "/understand-explain",
+          "/understand-onboard",
+          "/understand-domain",
+          "/understand-knowledge"
+        ]
+      },
+      "risk_notes": [
+        "Not installed or executed locally as of 2026-06-15.",
+        "The installer is a curl-pipe shell script; review the script or clone manually before running it.",
+        "The plugin scans local projects and reads source files, docs, knowledge bases, file paths, imports, classes, functions, and dependency structure.",
+        "Generated graph data is written to .understand-anything/ and may contain sensitive architecture, business logic, filenames, summaries, and code-derived metadata.",
+        "README suggests committing generated graph JSON for team sharing; do this only after reviewing for secrets, private paths, proprietary code summaries, and business-sensitive information.",
+        "The tool uses LLM-agent analysis and static analysis; review whether analyzed source or summaries are sent to model providers by the active agent/harness.",
+        "Security.md states the tool is local-only and does not phone home, but local harness/model behavior and generated dashboard exposure still need verification before active use.",
+        "The dashboard includes a file-content endpoint gated by an access token and graph-derived path allowlist; verify before opening on shared networks.",
+        "Auto-update via post-commit hook can change repository behavior; enable only after reviewing hook files."
+      ],
+      "source_review": {
+        "checked_at": "2026-06-15",
+        "checked_commit": "09ede1917ffd043e6d5bbc8a80b45760814c2d7f",
+        "default_branch": "main",
+        "version_observed": "2.7.7",
+        "github_description": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.",
+        "primary_language": "TypeScript",
+        "license": "MIT",
+        "repo_created_at": "2026-03-15",
+        "repo_pushed_at": "2026-06-11",
+        "supported_platforms_observed": [
+          "Claude Code",
+          "Codex",
+          "Cursor",
+          "VS Code + GitHub Copilot",
+          "Copilot CLI",
+          "OpenCode",
+          "OpenClaw",
+          "Antigravity",
+          "Gemini CLI",
+          "Pi Agent",
+          "Vibe CLI",
+          "Hermes",
+          "Cline",
+          "KIMI CLI",
+          "Trae",
+          "Nanobot"
+        ],
+        "skills_observed": [
+          "understand",
+          "understand-dashboard",
+          "understand-chat",
+          "understand-diff",
+          "understand-explain",
+          "understand-onboard",
+          "understand-domain",
+          "understand-knowledge"
+        ]
+      },
+      "detail_path": "skills/egonex-ai-understand-anything.md",
+      "created_at": "2026-06-15",
+      "updated_at": "2026-06-15"
     }
   ]
 }
