@@ -225,6 +225,153 @@
       "detail_path": "tools/skillsmp-com.md",
       "created_at": "2026-06-15",
       "updated_at": "2026-06-15"
+    },
+    {
+      "id": "skillsdirectory-com",
+      "name": "Skills Directory",
+      "status": "watching",
+      "trust_level": "medium",
+      "summary": "A hosted security-first directory for Claude and agent skills that emphasizes manual review, automated security scanning, A-F risk grades, one-click copy/install flows, API access, and related OpenSkills CLI installation guidance.",
+      "use_cases": [
+        "Discover candidate Claude, Claude Code, Codex, Cursor, and agent skills with security grading signals.",
+        "Prioritize lower-risk skills by filtering on security grade, verified status, category, and popularity.",
+        "Use API access to search skills programmatically when rate limits and key handling are acceptable.",
+        "Learn how to install, write, compare, and evaluate agent skills through the site's learning and security pages.",
+        "Use the related OpenSkills CLI to install or load SKILL.md-format skills across multiple coding agents."
+      ],
+      "tags": [
+        "agent",
+        "skills",
+        "directory",
+        "marketplace",
+        "discovery",
+        "security",
+        "security-scanning",
+        "rest-api",
+        "hosted-service",
+        "claude-code",
+        "codex",
+        "openskills"
+      ],
+      "links": [
+        {
+          "type": "website",
+          "url": "https://www.skillsdirectory.com/",
+          "note": "Hosted secure skills directory."
+        },
+        {
+          "type": "skills",
+          "url": "https://www.skillsdirectory.com/skills",
+          "note": "Browse skills."
+        },
+        {
+          "type": "security",
+          "url": "https://www.skillsdirectory.com/security",
+          "note": "Security scanning overview and live grade distribution."
+        },
+        {
+          "type": "security-methodology",
+          "url": "https://www.skillsdirectory.com/security/methodology",
+          "note": "Methodology for A-F grading and limits of static scans."
+        },
+        {
+          "type": "api-docs",
+          "url": "https://www.skillsdirectory.com/api-docs",
+          "note": "REST API documentation and rate limits."
+        },
+        {
+          "type": "learn",
+          "url": "https://www.skillsdirectory.com/learn",
+          "note": "Guides for installing, writing, and comparing skills."
+        },
+        {
+          "type": "submit",
+          "url": "https://www.skillsdirectory.com/submit",
+          "note": "Submit a skill for review."
+        },
+        {
+          "type": "cli-npm",
+          "url": "https://www.npmjs.com/package/openskills",
+          "note": "Related OpenSkills CLI package referenced by the site."
+        },
+        {
+          "type": "cli-github",
+          "url": "https://github.com/numman-ali/openskills",
+          "note": "OpenSkills CLI source repository."
+        }
+      ],
+      "install": {
+        "installed": false,
+        "access": "hosted",
+        "hosted_url": "https://www.skillsdirectory.com/",
+        "rest_api": {
+          "base_url": "https://www.skillsdirectory.com",
+          "authentication": "API key required",
+          "endpoints_observed": [
+            "GET /api/v1/skills",
+            "GET /api/v1/skills/:slug",
+            "GET /api/v1/skills/search",
+            "GET /api/v1/categories",
+            "GET /api/v1/stats"
+          ],
+          "free_limit": "100 requests/day",
+          "paid_limits_observed": [
+            "Pro: 1,000 requests/day",
+            "Enterprise: 10,000 requests/day"
+          ]
+        },
+        "related_cli": {
+          "name": "openskills",
+          "installed": false,
+          "npm_package": "openskills",
+          "latest_version_checked": "1.5.0",
+          "install_command": "npm install -g openskills",
+          "npx_examples": [
+            "npx openskills install anthropics/skills",
+            "npx openskills sync"
+          ],
+          "license": "Apache-2.0",
+          "node": ">=20.6.0"
+        }
+      },
+      "risk_notes": [
+        "Not self-hosted, API-connected, or locally installed as of 2026-06-15.",
+        "The hosted site source repository was not confirmed during review; only related OpenSkills CLI source was reviewed.",
+        "Security grades are useful triage signals but do not prove intent, correctness, future repository safety, or safe runtime behavior.",
+        "The methodology page explicitly says automated scans cannot guarantee intent, correctness, or future repository changes.",
+        "Every discovered skill still needs separate review of source, license, scripts, assets, dependencies, and permissions before installation.",
+        "API access requires keys; keys must be stored in a secret manager or environment variable and never committed.",
+        "API pricing and fields vary by tier; security findings and full content may require paid plans.",
+        "Robots.txt disallows /api/, /login, and /auth for crawlers; use documented API access and respect rate limits.",
+        "The related OpenSkills CLI can modify AGENTS.md and install skills into project or global skills directories; review commands before running."
+      ],
+      "source_review": {
+        "checked_at": "2026-06-15",
+        "website_description": "Security-tested agent skills for Claude, coding agents, and AI workflows.",
+        "website_claimed_security_rules": "50+ detection rules across 10 threat categories",
+        "website_claimed_scanned_skills": 96863,
+        "website_claimed_grade_a_skills": 92024,
+        "default_visibility": "Grade A skills shown by default",
+        "security_categories_observed": [
+          "Execution",
+          "Network",
+          "File System",
+          "Obfuscation",
+          "Credentials",
+          "Persistence",
+          "Prompt Injection",
+          "Data Exfiltration",
+          "Hidden Helpers",
+          "Supply Chain"
+        ],
+        "site_source_repository": "not confirmed",
+        "related_cli_repository": "https://github.com/numman-ali/openskills",
+        "related_cli_license": "Apache-2.0",
+        "related_cli_version_checked": "1.5.0"
+      },
+      "detail_path": "tools/skillsdirectory-com.md",
+      "created_at": "2026-06-15",
+      "updated_at": "2026-06-15"
     }
   ]
 }
