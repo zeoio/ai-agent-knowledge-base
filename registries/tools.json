@@ -372,6 +372,248 @@
       "detail_path": "tools/skillsdirectory-com.md",
       "created_at": "2026-06-15",
       "updated_at": "2026-06-15"
+    },
+    {
+      "id": "moorcheh-ai-memanto",
+      "name": "Memanto",
+      "status": "watching",
+      "trust_level": "medium",
+      "summary": "An open-source persistent semantic memory CLI, REST API, UI, and MCP integration layer for AI agents such as Claude Code, Codex, Cursor, Windsurf, Cline, Continue, Goose, and GitHub Copilot.",
+      "use_cases": [
+        "Give coding or research agents persistent memory for preferences, decisions, facts, goals, instructions, errors, artifacts, and project context.",
+        "Recall relevant memories across conversations or context resets without manually re-explaining stable context.",
+        "Upload documents into an agent memory namespace for later semantic recall and grounded answers.",
+        "Connect memory behavior into agent instruction files and skill directories with `memanto connect`.",
+        "Expose Memanto memory operations through a local REST API or the separate `memanto-mcp` MCP server."
+      ],
+      "tags": [
+        "agent",
+        "memory",
+        "long-term-memory",
+        "semantic-memory",
+        "rag",
+        "cli",
+        "mcp",
+        "rest-api",
+        "local-service",
+        "hosted-service",
+        "python",
+        "codex",
+        "claude-code",
+        "cursor",
+        "langgraph",
+        "crewai",
+        "open-source"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/moorcheh-ai/memanto",
+          "note": "Canonical public repository."
+        },
+        {
+          "type": "homepage",
+          "url": "https://memanto.ai",
+          "note": "Project homepage."
+        },
+        {
+          "type": "docs",
+          "url": "https://docs.memanto.ai",
+          "note": "Memanto documentation linked from README."
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/moorcheh-ai/memanto/blob/main/README.md",
+          "note": "Overview, quick start, integrations, CLI reference, architecture, and research links."
+        },
+        {
+          "type": "pypi",
+          "url": "https://pypi.org/project/memanto/",
+          "note": "Main Python CLI/package."
+        },
+        {
+          "type": "mcp-package",
+          "url": "https://pypi.org/project/memanto-mcp/",
+          "note": "Separate MCP server package."
+        },
+        {
+          "type": "mcp-readme",
+          "url": "https://github.com/moorcheh-ai/memanto/blob/main/integrations/mcp/README.md",
+          "note": "MCP server installation, tools, configuration, and network transport notes."
+        },
+        {
+          "type": "security",
+          "url": "https://github.com/moorcheh-ai/memanto/blob/main/SECURITY.md",
+          "note": "Security policy, secret handling, and security features."
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2604.22085",
+          "note": "Research paper linked from README."
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/moorcheh-ai/memanto/blob/main/LICENSE",
+          "note": "MIT license."
+        }
+      ],
+      "install": {
+        "installed": false,
+        "review_status": "source-read-not-installed",
+        "python": ">=3.10,<4",
+        "pypi_version_checked": "0.2.0",
+        "pypi_install": "pip install memanto",
+        "initial_setup": "memanto",
+        "local_mode": {
+          "command": "memanto",
+          "selection": "Choose On-Prem during interactive setup.",
+          "requires": [
+            "Docker",
+            "Ollama",
+            "local Moorcheh engine container managed by Memanto"
+          ]
+        },
+        "cloud_mode": {
+          "command": "memanto",
+          "selection": "Choose Cloud during interactive setup and paste a Moorcheh API key.",
+          "api_key_url": "https://console.moorcheh.ai/api-keys"
+        },
+        "agent_connect_examples": [
+          "memanto connect claude-code",
+          "memanto connect codex",
+          "memanto connect codex --project-dir ./my-project",
+          "memanto connect codex --global"
+        ],
+        "mcp": {
+          "installed": false,
+          "pypi_version_checked": "0.1.0",
+          "install_command": "pip install memanto-mcp",
+          "required_env": [
+            "MOORCHEH_API_KEY"
+          ],
+          "optional_env": [
+            "MEMANTO_DEFAULT_AGENT_ID",
+            "MEMANTO_AGENT_PATTERN",
+            "MEMANTO_AGENT_AUTO_CREATE",
+            "MEMANTO_SESSION_DURATION_HOURS",
+            "MEMANTO_EXPOSE_ADMIN",
+            "MEMANTO_MCP_TRANSPORT",
+            "MEMANTO_MCP_HOST",
+            "MEMANTO_MCP_PORT",
+            "MEMANTO_MCP_LOG_LEVEL"
+          ],
+          "tools_observed": [
+            "remember",
+            "batch_remember",
+            "recall",
+            "recall_recent",
+            "recall_as_of",
+            "recall_changed_since",
+            "answer",
+            "create_agent",
+            "list_agents",
+            "get_agent",
+            "delete_agent"
+          ]
+        },
+        "dependencies_observed": [
+          "fastapi",
+          "uvicorn",
+          "moorcheh-sdk",
+          "pydantic",
+          "pydantic-settings",
+          "python-dotenv",
+          "pyjwt",
+          "typer",
+          "httpx",
+          "pyyaml",
+          "rich",
+          "python-multipart",
+          "rapidfuzz"
+        ]
+      },
+      "risk_notes": [
+        "Not installed, configured, or connected locally as of 2026-06-15.",
+        "This tool is designed to persist agent memory across sessions; stored memories can include preferences, instructions, decisions, facts, project context, errors, artifacts, and uploaded file content.",
+        "Cloud mode sends memories and uploaded document content to Moorcheh services; confirm data residency, retention, deletion, and privacy requirements before use with sensitive material.",
+        "Local/on-prem mode still requires Docker and local services; verify what containers, volumes, ports, and Ollama models are created before daily use.",
+        "The CLI stores configuration under ~/.memanto/config.yaml and an encryption key under ~/.memanto/.key; these files and session tokens must never be committed.",
+        "The SECURITY.md says Moorcheh API keys start with mk_, while MCP docs show mch_ placeholders; treat all Moorcheh-looking tokens as secrets.",
+        "`memanto connect` modifies agent instruction/config files such as CLAUDE.md, AGENTS.md, .cursor rules, skill directories, and in some cases hooks or permissions.",
+        "Global connection commands such as `memanto connect codex --global` can change behavior across future agent sessions.",
+        "The MCP server can expose memory tools over stdio, SSE, or streamable HTTP; HTTP/SSE transport needs an external reverse proxy or auth layer because the server authenticates upstream but not inbound MCP clients.",
+        "Memory poisoning, stale memories, incorrect confidence/provenance, and over-recall can affect future agent decisions; use typed memory and review conflict handling before active use.",
+        "The `answer` workflow may use configured LLM models over stored memory context; verify provider routing and model defaults before storing private data."
+      ],
+      "source_review": {
+        "checked_at": "2026-06-15",
+        "checked_commit": "262db90e30b34444ae49e5aef66be6d689607493",
+        "default_branch": "main",
+        "github_description": "Memory that AI Agents Love!",
+        "homepage": "https://memanto.ai",
+        "primary_language": "Python",
+        "license": "MIT",
+        "repo_created_at": "2026-03-23",
+        "repo_pushed_at": "2026-06-12",
+        "stars_observed": 840,
+        "forks_observed": 294,
+        "open_issues_observed": 114,
+        "pypi_version_checked": "0.2.0",
+        "mcp_pypi_version_checked": "0.1.0",
+        "version_tag_observed": "v0.2.0",
+        "claimed_integrations_observed": [
+          "Claude Code",
+          "Codex",
+          "Cursor",
+          "Windsurf",
+          "Antigravity",
+          "Gemini CLI",
+          "Cline",
+          "Continue",
+          "OpenCode",
+          "Goose",
+          "Roo",
+          "GitHub Copilot",
+          "Augment"
+        ],
+        "memory_types_observed": [
+          "instruction",
+          "fact",
+          "decision",
+          "goal",
+          "commitment",
+          "preference",
+          "relationship",
+          "context",
+          "event",
+          "learning",
+          "observation",
+          "artifact",
+          "error"
+        ],
+        "files_observed": [
+          "README.md",
+          "SECURITY.md",
+          "pyproject.toml",
+          "memanto/",
+          "docs/",
+          "integrations/mcp/",
+          "integrations/crewai/",
+          "integrations/langgraph/",
+          "Dockerfile",
+          "docker-compose.yml",
+          ".env.example",
+          "tests/"
+        ],
+        "repository_classifiers": [
+          "Development Status :: 3 - Alpha",
+          "Environment :: Console",
+          "Topic :: Scientific/Engineering :: Artificial Intelligence"
+        ]
+      },
+      "detail_path": "tools/moorcheh-ai-memanto.md",
+      "created_at": "2026-06-15",
+      "updated_at": "2026-06-15"
     }
   ]
 }
