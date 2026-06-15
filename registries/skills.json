@@ -160,6 +160,143 @@
       "detail_path": "skills/alchaincyf-huashu-design.md",
       "created_at": "2026-06-14",
       "updated_at": "2026-06-14"
+    },
+    {
+      "id": "obra-superpowers",
+      "name": "Superpowers",
+      "status": "watching",
+      "trust_level": "medium",
+      "summary": "A multi-skill software development methodology and cross-agent plugin package for coding agents, covering brainstorming, planning, TDD, systematic debugging, code review, worktrees, and subagent-driven development.",
+      "use_cases": [
+        "Give coding agents a structured end-to-end development workflow from idea clarification through branch completion.",
+        "Enforce test-driven development, systematic debugging, code review, and verification-before-completion practices.",
+        "Install a common skills library across Claude Code, Codex, Cursor, Gemini CLI, OpenCode, Factory Droid, and GitHub Copilot CLI.",
+        "Use subagent-driven development and parallel-agent workflows for larger implementation plans."
+      ],
+      "tags": [
+        "agent",
+        "skill",
+        "plugin",
+        "coding",
+        "codex",
+        "claude-code",
+        "cursor",
+        "gemini-cli",
+        "opencode",
+        "tdd",
+        "debugging",
+        "planning",
+        "code-review",
+        "worktrees",
+        "subagents"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/obra/superpowers",
+          "note": "Canonical public repository."
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/obra/superpowers/blob/main/README.md",
+          "note": "Overview, installation instructions, workflow, and skill list."
+        },
+        {
+          "type": "codex-plugin",
+          "url": "https://github.com/obra/superpowers/blob/main/.codex-plugin/plugin.json",
+          "note": "Codex plugin manifest."
+        },
+        {
+          "type": "claude-plugin",
+          "url": "https://github.com/obra/superpowers/blob/main/.claude-plugin/plugin.json",
+          "note": "Claude plugin manifest."
+        },
+        {
+          "type": "cursor-plugin",
+          "url": "https://github.com/obra/superpowers/blob/main/.cursor-plugin/plugin.json",
+          "note": "Cursor plugin manifest."
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/obra/superpowers/blob/main/LICENSE",
+          "note": "MIT license."
+        },
+        {
+          "type": "release-announcement",
+          "url": "https://blog.fsck.com/2025/10/09/superpowers/",
+          "note": "Original release announcement linked from README."
+        }
+      ],
+      "install": {
+        "installed": false,
+        "review_status": "source-read-not-installed",
+        "version_observed": "5.1.0",
+        "claude_code_official_marketplace": "/plugin install superpowers@claude-plugins-official",
+        "claude_code_superpowers_marketplace": [
+          "/plugin marketplace add obra/superpowers-marketplace",
+          "/plugin install superpowers@superpowers-marketplace"
+        ],
+        "codex": "Install Superpowers from the official Codex plugin marketplace UI.",
+        "factory_droid": [
+          "droid plugin marketplace add https://github.com/obra/superpowers",
+          "droid plugin install superpowers@superpowers"
+        ],
+        "gemini_cli": [
+          "gemini extensions install https://github.com/obra/superpowers",
+          "gemini extensions update superpowers"
+        ],
+        "cursor": "/add-plugin superpowers",
+        "github_copilot_cli": [
+          "copilot plugin marketplace add obra/superpowers-marketplace",
+          "copilot plugin install superpowers@superpowers-marketplace"
+        ]
+      },
+      "risk_notes": [
+        "Not installed or executed locally as of 2026-06-15.",
+        "This is a behavior-shaping methodology package, not just a passive reference; it can strongly change how an agent plans, asks questions, writes tests, reviews code, and finishes branches.",
+        "The using-superpowers skill tells agents to invoke relevant skills before any response or action; verify this matches the desired workflow before enabling.",
+        "Repository includes hooks, plugin manifests, agent instructions, tests, scripts, and cross-platform adapter files; review install target and generated files per harness.",
+        "TDD and subagent-driven workflows can be valuable but may add process overhead for small tasks or conflict with existing project conventions.",
+        "User instructions are documented as higher priority than Superpowers skills, but local agent behavior should be tested before active use.",
+        "Installing into official plugin marketplaces or agent skill directories can affect future sessions; start in a disposable or project-local context."
+      ],
+      "source_review": {
+        "checked_at": "2026-06-15",
+        "checked_commit": "6fd4507659784c351abbd2bc264c7162cfd386dc",
+        "default_branch": "main",
+        "version_observed": "5.1.0",
+        "license": "MIT",
+        "author": "Jesse Vincent",
+        "primary_content": [
+          "skills/",
+          ".codex-plugin/",
+          ".claude-plugin/",
+          ".cursor-plugin/",
+          ".opencode/",
+          "gemini-extension.json",
+          "hooks/",
+          "tests/"
+        ],
+        "skills_observed": [
+          "brainstorming",
+          "using-git-worktrees",
+          "writing-plans",
+          "executing-plans",
+          "subagent-driven-development",
+          "test-driven-development",
+          "requesting-code-review",
+          "receiving-code-review",
+          "finishing-a-development-branch",
+          "systematic-debugging",
+          "verification-before-completion",
+          "dispatching-parallel-agents",
+          "writing-skills",
+          "using-superpowers"
+        ]
+      },
+      "detail_path": "skills/obra-superpowers.md",
+      "created_at": "2026-06-15",
+      "updated_at": "2026-06-15"
     }
   ]
 }
