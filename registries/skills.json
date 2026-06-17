@@ -597,6 +597,190 @@
       "detail_path": "skills/joeseesun-qiaomu-anything-to-notebooklm.md",
       "created_at": "2026-06-15",
       "updated_at": "2026-06-15"
+    },
+    {
+      "id": "nextlevelbuilder-ui-ux-pro-max-skill",
+      "name": "UI/UX Pro Max",
+      "status": "watching",
+      "trust_level": "medium",
+      "summary": "A multi-agent UI/UX design intelligence skill and installer with searchable design databases for styles, color palettes, typography, UX rules, chart guidance, product-specific reasoning, and stack-specific implementation advice.",
+      "use_cases": [
+        "Generate project-specific UI design systems with product, style, color, typography, landing-page pattern, and anti-pattern recommendations.",
+        "Guide UI implementation and review for landing pages, SaaS apps, dashboards, admin panels, mobile apps, e-commerce, portfolios, and component libraries.",
+        "Search structured UI/UX knowledge across styles, palettes, typography, chart types, UX guidelines, and framework-specific best practices.",
+        "Install a UI/UX skill into Codex, Claude Code, Cursor, Windsurf, Gemini CLI, OpenCode, Continue, GitHub Copilot, and other AI coding assistants.",
+        "Persist generated design systems into a project-local design-system folder for later AI-agent retrieval."
+      ],
+      "tags": [
+        "agent",
+        "skill",
+        "design",
+        "ui-ux",
+        "design-system",
+        "accessibility",
+        "typography",
+        "color-palette",
+        "charts",
+        "frontend",
+        "codex",
+        "claude-code",
+        "cursor",
+        "gemini-cli",
+        "opencode",
+        "npm",
+        "python",
+        "multi-platform"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+          "note": "Canonical public repository."
+        },
+        {
+          "type": "homepage",
+          "url": "https://uupm.cc",
+          "note": "Project homepage linked from README and skill metadata."
+        },
+        {
+          "type": "readme",
+          "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/README.md",
+          "note": "Overview, feature list, supported platforms, install commands, and usage examples."
+        },
+        {
+          "type": "skill",
+          "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md",
+          "note": "Main Claude skill file reviewed in the repository."
+        },
+        {
+          "type": "skill-metadata",
+          "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/skill.json",
+          "note": "Cross-platform skill metadata with version, supported platforms, and install command."
+        },
+        {
+          "type": "claude-plugin",
+          "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude-plugin/plugin.json",
+          "note": "Claude plugin manifest."
+        },
+        {
+          "type": "npm",
+          "url": "https://www.npmjs.com/package/uipro-cli",
+          "note": "Installer CLI package."
+        },
+        {
+          "type": "license",
+          "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/LICENSE",
+          "note": "Repository root MIT license."
+        }
+      ],
+      "install": {
+        "installed": false,
+        "review_status": "source-read-not-installed",
+        "metadata_version_observed": "2.5.0",
+        "repository_tag_observed": "v2.5.0",
+        "npm_latest_checked": "2.2.3",
+        "claude_code_marketplace": [
+          "/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill",
+          "/plugin install ui-ux-pro-max@ui-ux-pro-max-skill"
+        ],
+        "npm_global_install": [
+          "npm install -g uipro-cli",
+          "uipro init --ai codex"
+        ],
+        "npx_codex_install": "npx uipro-cli init --ai codex",
+        "codex_global_install": "uipro init --ai codex --global",
+        "offline_install": "uipro init --ai codex --offline",
+        "update_command": "uipro update --ai codex",
+        "uninstall_command": "uipro uninstall --ai codex",
+        "platforms_observed": [
+          "Claude Code",
+          "Cursor",
+          "Windsurf",
+          "Antigravity",
+          "GitHub Copilot",
+          "Kiro",
+          "Roo Code",
+          "Codex",
+          "Qoder",
+          "Gemini CLI",
+          "Trae",
+          "OpenCode",
+          "Continue",
+          "CodeBuddy",
+          "Droid",
+          "KiloCode",
+          "Warp",
+          "Augment"
+        ],
+        "codex_install_target_observed": ".codex/skills/ui-ux-pro-max",
+        "dependencies_observed": [
+          "Node.js/npm for uipro-cli",
+          "Python 3.x for search.py",
+          "commander",
+          "chalk",
+          "ora",
+          "prompts",
+          "csv/json standard Python libraries"
+        ]
+      },
+      "risk_notes": [
+        "Not installed or executed locally as of 2026-06-17.",
+        "Installer commands can write skill files into project-local or global AI assistant directories; global installs may affect future agent sessions across projects.",
+        "The npm package version checked was 2.2.3 while the repository metadata and tag show 2.5.0; verify current npm and GitHub release state before installing.",
+        "Repository root LICENSE and package.json report MIT, but cli/README.md says CC-BY-NC-4.0; resolve the license inconsistency before redistributing or adapting assets.",
+        ".claude-plugin/marketplace.json still reports 2.2.1 while skill.json and plugin.json report 2.5.0; treat marketplace metadata as potentially stale.",
+        "The CLI can fetch GitHub releases in legacy/update flows or generate files from bundled assets; review the installed output in a disposable project first.",
+        "Generated skill content includes design rules that can strongly shape UI decisions and may conflict with an existing product design system.",
+        "The search script can persist design-system/MASTER.md and page override files into the current project when --persist is used.",
+        "The repository includes many CSV databases, scripts, templates, TTF font assets, and multiple Claude skill directories; review licensing and install footprint before active use.",
+        "Search and generated recommendations are rule/database driven; outputs still need human review for accessibility, brand fit, and implementation correctness."
+      ],
+      "source_review": {
+        "checked_at": "2026-06-17",
+        "checked_commit": "b7e3af80f6e331f6fb456667b82b12cade7c9d35",
+        "default_branch": "main",
+        "version_observed": "2.5.0",
+        "latest_tag_observed": "v2.5.0",
+        "npm_latest_checked": "2.2.3",
+        "github_api_status": "GitHub API returned 403 during review; git ls-remote, shallow clone, raw repository files, and npm registry metadata were used.",
+        "license": "MIT in root LICENSE and package metadata; cli/README.md says CC-BY-NC-4.0.",
+        "primary_languages_observed": [
+          "Markdown",
+          "TypeScript",
+          "Python",
+          "CSV"
+        ],
+        "data_inventory_observed": [
+          "67 UI styles",
+          "161 color palettes",
+          "57 font pairings",
+          "99 UX guidelines",
+          "25 chart types",
+          "161 product reasoning rules",
+          "15+ stack guideline files"
+        ],
+        "files_observed": [
+          "README.md",
+          "skill.json",
+          "LICENSE",
+          ".claude-plugin/plugin.json",
+          ".claude/skills/ui-ux-pro-max/SKILL.md",
+          ".claude/skills/banner-design/",
+          ".claude/skills/brand/",
+          ".claude/skills/design/",
+          ".claude/skills/design-system/",
+          ".claude/skills/slides/",
+          ".claude/skills/ui-styling/",
+          "src/ui-ux-pro-max/data/",
+          "src/ui-ux-pro-max/scripts/",
+          "cli/package.json",
+          "cli/src/",
+          "cli/assets/"
+        ]
+      },
+      "detail_path": "skills/nextlevelbuilder-ui-ux-pro-max-skill.md",
+      "created_at": "2026-06-17",
+      "updated_at": "2026-06-17"
     }
   ]
 }
